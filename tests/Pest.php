@@ -1,6 +1,6 @@
 <?php
 
-use Tests\CreatesApplication;
 use Illuminate\Foundation\Testing\TestCase;
+use Tests\CreatesApplication;
 
 uses(TestCase::class, CreatesApplication::class)->in('Unit', 'Feature');
