@@ -4,10 +4,10 @@ name: Test Laravel Github action
 on:
   push:
     branches:
-      - master
+      - middleware
   pull_request:
     branches:
-      - master
+      - middleware
 
 jobs:
   laravel-tests:
