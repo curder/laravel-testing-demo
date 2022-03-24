@@ -7,7 +7,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 // 测试中间件逻辑是否正确
 it('the middleware is in isolation', function () {
-
     $response = (new RedirectMiddleware())->handle(
         createRequest('get', '/'),
         fn () => new Response()
