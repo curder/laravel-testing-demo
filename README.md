@@ -1,6 +1,6 @@
-[![Test Laravel Github action](https://github.com/curder/laravel-testing-demo/actions/workflows/run-test.yml/badge.svg?branch=master)](https://github.com/curder/laravel-testing-demo/actions/workflows/run-test.yml)
-[![PHPStan](https://github.com/curder/laravel-testing-demo/actions/workflows/phpstan.yml/badge.svg?branch=master)](https://github.com/curder/laravel-testing-demo/actions/workflows/phpstan.yml)
-[![Check & fix styling](https://github.com/curder/laravel-testing-demo/actions/workflows/php-cs-fixer.yml/badge.svg?branch=master)](https://github.com/curder/laravel-testing-demo/actions/workflows/php-cs-fixer.yml)
+[![Test Laravel Github action](https://github.com/curder/laravel-testing-demo/actions/workflows/run-test.yml/badge.svg?branch=middleware)](https://github.com/curder/laravel-testing-demo/actions/workflows/run-test.yml)
+[![PHPStan](https://github.com/curder/laravel-testing-demo/actions/workflows/phpstan.yml/badge.svg?branch=middleware)](https://github.com/curder/laravel-testing-demo/actions/workflows/phpstan.yml)
+[![Check & fix styling](https://github.com/curder/laravel-testing-demo/actions/workflows/php-cs-fixer.yml/badge.svg?branch=middleware)](https://github.com/curder/laravel-testing-demo/actions/workflows/php-cs-fixer.yml)
 
 
 # Laravel 测试
