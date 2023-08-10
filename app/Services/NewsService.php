@@ -12,6 +12,7 @@ use Throwable;
  * 在 Laravel 中使用 Http 客户端测试 api 请求
  *
  * @see https://laravel-news.com/laravel-http-client-tips
+ * @see https://github.com/curder/laravel-test-demo/tree/news-api
  */
 class NewsService
 {
