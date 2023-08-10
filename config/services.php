@@ -31,4 +31,11 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'news' => [
+        'base_url' => env('NEWS_API_BASE_URL'),
+        'api_token' => env('NEWS_API_TOKEN'),
+        'connect_timeout' => env('NEWS_API_CONNECT_TIMEOUT', 10),
+        'timeout' => env('NEWS_API_TIMEOUT', 10),
+        'retry' => 3,
+    ],
 ];
