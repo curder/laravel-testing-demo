@@ -1,3 +1,6 @@
 <?php
 
-test('can render index page')->get('/')->assertOk();
+test(description: 'can render index page')
+    ->get('/')
+    ->assertOk()
+    ->assertViewIs('welcome');
