@@ -26,19 +26,17 @@ it('can fetch top headlines news', closure: function () {
             $request->url() === config('services.news.base_url').'/v2/top-headlines?country=us';
     });
 
-    $this->assertInstanceOf(Carbon::class, Arr::get($response, 'articles.0.published_at'));
-    $this->assertEquals('The Athletic Staff', Arr::get($response, 'articles.0.author'));
-    $this->assertCount(20, $response['articles']);
-    $this->assertArrayHasKey('status', $response);
-    $this->assertArrayHasKey('totalResults', $response);
-    $this->assertArrayHasKey('articles', $response);
+    expect(Arr::get($response, 'articles.0.published_at'))
+        ->toBeInstanceOf(Carbon::class)
+        ->and(Arr::get($response, 'articles.0.author'))->toContain('The Athletic Staff')
+        ->and(count($response['articles']))->toEqual(20)
+        ->and($response)->toHaveKey('status')
+        ->and($response)->toHaveKey('totalResults');
 });
 
 it('will throw exception when request failed', function () {
     Http::fakeSequence()->pushStatus(Response::HTTP_UNAUTHORIZED);
-
-    $this->expectException(NewsRequestException::class);
-    app(NewsService::class)->headlines();
+    expect(fn () => app(NewsService::class)->headlines())->toThrow(NewsRequestException::class);
 });
 
 it('will retry up to three times', function () {
