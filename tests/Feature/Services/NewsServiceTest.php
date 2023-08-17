@@ -28,8 +28,8 @@ it('can fetch top headlines news', closure: function () {
 
 it('will throw exception when request failed', function () {
     Http::fakeSequence()->pushStatus(Response::HTTP_UNAUTHORIZED);
-    expect(fn () => app(NewsService::class)->headlines())->toThrow(NewsRequestException::class);
-});
+    app(NewsService::class)->headlines();
+})->throws(NewsRequestException::class, 'A request was made, but the response sequence is empty.');
 
 it('will retry up to three times', function () {
     Http::fakeSequence()
